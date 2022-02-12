@@ -14,9 +14,6 @@ public class JsonFile {
 	
     /**
      * Creates a new JSON file
-     * @param name The name of the file
-     * @param header The header of the objects
-     * @param path The path to the file
      * @throws IOException 
      */
 	public JsonFile(String name, String header, String path) throws IOException {
@@ -29,6 +26,13 @@ public class JsonFile {
 		if(!this.file.exists()) {
 			this.file.createNewFile();
 		}
+	}
+	
+    /**
+     * Sets the main header data
+     */	
+	public void setHeader(String header) {
+		this.header = header;
 	}
 	
     /**
@@ -91,7 +95,6 @@ public class JsonFile {
 	
     /**
      * Returns a JsonObject containing the JsonFile data
-     * @return 
      * @throws FileNotFoundException 
      */
 	public JsonObject load() throws FileNotFoundException {
