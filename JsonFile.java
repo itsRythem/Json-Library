@@ -69,6 +69,13 @@ public class JsonFile {
 	}
 	
     /**
+     * Adds a new Json header
+     */
+	public void addHeader(JsonHeader header) {
+		this.headers.add(header);
+	}
+	
+    /**
      * Returns a JsonObject containing the JsonFile data
      * @return 
      * @throws FileNotFoundException 
