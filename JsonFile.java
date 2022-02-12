@@ -69,10 +69,24 @@ public class JsonFile {
 	}
 	
     /**
+     * Adds a new Json item with interior constructor
+     */
+	public void addItem(String content) {
+		this.objects.add(new JsonItem(content));
+	}
+	
+    /**
      * Adds a new Json header
      */
 	public void addHeader(JsonHeader header) {
 		this.headers.add(header);
+	}
+	
+    /**
+     * Adds a new Json header with interior constructor
+     */
+	public void addHeader(String property, String data) {
+		this.headers.add(new JsonHeader(property, data));
 	}
 	
     /**
